@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #4ADE80;
+  --dark-bg: #0A0A0A;
+  --card-bg: #141414;
+  --border-color: #2A2A2A;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-bg);
+  color: #FFFFFF;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.neon-text {
+  color: var(--neon-green);
+}
+
+.neon-border {
+  border-color: var(--neon-green);
+}
+
+.neon-bg {
+  background-color: var(--neon-green);
+}
+
+input, select {
+  background-color: var(--dark-bg) !important;
+  border-color: var(--border-color) !important;
+  color: white !important;
+  border-radius: 0.5rem !important;
+}
+
+input:focus, select:focus {
+  border-color: var(--neon-green) !important;
+  ring-color: var(--neon-green) !important;
+}
+
+table {
+  background-color: var(--card-bg) !important;
+}
+
+thead {
+  background-color: var(--dark-bg) !important;
+}
+
+tr {
+  border-color: var(--border-color) !important;
+}
+
+.chart-container {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* Glass effect for cards */
+.glass-card {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
