@@ -32,7 +32,7 @@ export default function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit} className="bg-zinc-800 p-6 rounded-lg shadow-md">
       <div className="space-y-4">
         <div>
           <label htmlFor="amount" className="block text-sm font-medium text-gray-700">
@@ -43,9 +43,10 @@ export default function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
             id="amount"
             step="0.01"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
             value={formData.amount}
             onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
+            placeholder="Enter the amount"
           />
         </div>
 
@@ -56,7 +57,7 @@ export default function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
           <select
             id="category"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
             value={formData.category}
             onChange={(e) => setFormData({ ...formData, category: e.target.value })}
           >
@@ -76,9 +77,10 @@ export default function ExpenseForm({ onAddExpense }: ExpenseFormProps) {
           <input
             type="text"
             id="description"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-4 px-2"
             value={formData.description}
             onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+            placeholder='Enter a description'
           />
         </div>
 

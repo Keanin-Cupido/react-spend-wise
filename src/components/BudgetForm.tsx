@@ -28,7 +28,7 @@ export default function BudgetForm({ onAddBudget }: BudgetFormProps) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md">
+    <form onSubmit={handleSubmit} className="bg-zinc-800 p-6 rounded-lg shadow-md">
       <div className="space-y-4">
         <div>
           <label htmlFor="budgetCategory" className="block text-sm font-medium text-gray-700">
@@ -37,7 +37,7 @@ export default function BudgetForm({ onAddBudget }: BudgetFormProps) {
           <select
             id="budgetCategory"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
             value={formData.category}
             onChange={(e) => setFormData({ ...formData, category: e.target.value })}
           >
@@ -59,7 +59,7 @@ export default function BudgetForm({ onAddBudget }: BudgetFormProps) {
             id="limit"
             step="0.01"
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2"
             value={formData.limit}
             onChange={(e) => setFormData({ ...formData, limit: e.target.value })}
           />

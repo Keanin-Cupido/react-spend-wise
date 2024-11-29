@@ -1,4 +1,3 @@
-import React from 'react';
 import { Budget, CategoryTotal } from '../types';
 
 interface BudgetProgressProps {
@@ -8,7 +7,7 @@ interface BudgetProgressProps {
 
 export default function BudgetProgress({ budgets, categoryTotals }: BudgetProgressProps) {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="bg-zinc-800 p-6 rounded-lg shadow-md">
       <h2 className="text-lg font-semibold mb-4">Budget Progress</h2>
       <div className="space-y-4">
         {budgets.map((budget) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -58,7 +57,7 @@ export default function ExpenseChart({ categoryTotals }: ExpenseChartProps) {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md">
+    <div className="bg-zinc-800 p-6 rounded-lg shadow-md h-full max-h-[70vh]">
       <Pie data={data} options={options} />
     </div>
   );
